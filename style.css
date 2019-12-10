@@ -31,8 +31,7 @@ ul {
   list-style-type: none;
 }
 
-h1,
-h2 {
+h1 {
   font-family: "Sacramento", cursive;
 }
 
@@ -186,6 +185,7 @@ nav a:first-child {
 }
 
 .listings {
+  text-align: center;
   margin-top: 5rem;
   padding: 2rem;
   background-color: #f5f5f5;
@@ -619,7 +619,6 @@ ul {
 .height-placeholder {
   overflow: hidden;
   display: block;
-  height: 350px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -680,7 +679,9 @@ ul {
   font-weight: 600;
   padding: 5px 20px;
   text-align: left;
-  background: rgb(241, 239, 135);
+  background: rgb(246, 247, 184);
+  margin-top: -10px;
+  min-height: 100px;
 }
 
 .v2-listing-card:hover,
@@ -738,4 +739,8 @@ ul {
   footer {
     font-size: 1rem;
   }
+}
+
+.v2-listing-card__actions {
+  display: none;
 }
