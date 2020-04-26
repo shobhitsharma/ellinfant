@@ -1,10 +1,10 @@
-import { Component, ReactNode } from "react";
-import { ThemeProvider } from "styled-components";
-import Head from "next/head";
+import { Component, ReactNode } from 'react';
+import { ThemeProvider } from 'styled-components';
+import Head from 'next/head';
 
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import { theme, GlobalStyles } from "../../styles";
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import { theme, GlobalStyles } from '../../styles';
 
 const MainHead = ({ title }: { title: string }) => (
   <Head>
@@ -20,23 +20,9 @@ const MainHead = ({ title }: { title: string }) => (
     <meta property="og:image" content="/logo.svg" />
     <meta property="og:description" content="A Next.js Recipe discovery app." />
 
-    <link
-      rel="apple-touch-icon"
-      href="favicon/apple-touch-icon.png"
-      sizes="180x180"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="favicon/favicon-32x32.png"
-      sizes="32x32"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      href="favicon/favicon-16x16.png"
-      sizes="16x16"
-    />
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" sizes="180x180" />
+    <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16" />
 
     <link rel="manifest" href="/favicon/site.webmanifest" />
   </Head>

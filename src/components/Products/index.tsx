@@ -1,6 +1,6 @@
-import Product from "./Product";
-import Products from "./Products";
+import Product from './Product';
+import Products from './Products';
 
-export type { IProduct, ProductProps } from "./Product";
+export type { IProduct, ProductProps } from './Product';
 export { Product };
 export default Products;

@@ -1,4 +1,4 @@
-import { withRouter } from "next/router";
+import { withRouter } from 'next/router';
 
 export interface IProduct {
   listing_id: number;

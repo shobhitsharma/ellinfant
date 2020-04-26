@@ -1,5 +1,5 @@
-import Product from "./Product";
-import type { IProduct } from "./Product";
+import Product from './Product';
+import type { IProduct } from './Product';
 
 interface IProductsProps {
   products: IProduct[];
