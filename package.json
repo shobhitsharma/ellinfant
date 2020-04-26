@@ -26,7 +26,8 @@
     "jsxBracketSameLine": false,
     "semi": true,
     "singleQuote": true,
-    "arrowParens": "avoid"
+    "arrowParens": "avoid",
+    "trailingComma": "none"
   },
   "dependencies": {
     "next": "9.3.5",

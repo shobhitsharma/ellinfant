@@ -2,7 +2,8 @@ declare interface IColors {
   primary: string;
   secondary: string;
   textColor: string;
-  backgroundColor: string;
+  bgColor: string;
+  boxBgColor: string;
 }
 
 declare interface IFontFamily {
@@ -30,6 +31,12 @@ declare interface ILineHeight {
   small: number;
 }
 
+declare interface IShadows {
+  large: string;
+  medium: string;
+  small: string;
+}
+
 declare interface ITheme {
   fontFamily: IFontFamily;
   fontSize: IFontSize;
@@ -37,4 +44,6 @@ declare interface ITheme {
   lineHeight: ILineHeight;
   colors: IColors;
   spacing: number[];
+  radii: number[];
+  shadows: IShadows;
 }

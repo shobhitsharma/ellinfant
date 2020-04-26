@@ -15,7 +15,7 @@ const GlobalStyles = createGlobalStyle`
         font-size: ${({ theme }: { theme: ITheme }) => theme.fontSize.normal};
         line-height: ${({ theme }: { theme: ITheme }) => theme.lineHeight.medium};
         color: ${({ theme }: { theme: ITheme }) => theme.colors.textColor};
-        background-color: ${({ theme }: { theme: ITheme }) => theme.colors.backgroundColor};
+        background-color: ${({ theme }: { theme: ITheme }) => theme.colors.bgColor};
         -webkit-text-size-adjust: 100%;
         -webkit-font-kerning: normal;
         font-kerning: normal;

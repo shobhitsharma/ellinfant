@@ -1,4 +1,5 @@
 import { withRouter } from 'next/router';
+import styled from 'styled-components';
 
 export interface IProduct {
   listing_id: number;
@@ -58,9 +59,16 @@ export interface ProductProps {
   router: any;
 }
 
+const StyledProduct = styled.div`
+  background-color: ${({ theme }: { theme: ITheme }) => theme.colors.boxBgColor};
+  padding: ${({ theme }: { theme: ITheme }) => `${theme.spacing[3]}px`};
+  border-radius: ${({ theme }: { theme: ITheme }) => `${theme.radii[3]}px`};
+  box-shadow: ${({ theme }: { theme: ITheme }) => `${theme.shadows.large}`};
+`;
+
 const Product = (props: ProductProps) => {
   return (
-    <div className="product">
+    <StyledProduct>
       <h2 className="product__title">{props.product.title}</h2>
       <p className="product__description">{props.product.description}</p>
       <div className="product__price-button-container">
@@ -75,7 +83,7 @@ const Product = (props: ProductProps) => {
           Add to cart
         </button>
       </div>
-    </div>
+    </StyledProduct>
   );
 };
 
