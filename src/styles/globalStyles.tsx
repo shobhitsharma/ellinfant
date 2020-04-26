@@ -3,11 +3,19 @@ import resetCSS from './resetCSS';
 
 const GlobalStyles = createGlobalStyle`
     ${resetCSS}
+
+    html {
+        height: 100%;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
     
     body {
-        font: 400 16px/1.5 -apple-system, BlinkMacSystemFont, "Rubik", sans-serif;
-        color: #111;
-        background-color: #f6f7f8;
+        font-family: ${({ theme }: { theme: ITheme }) => theme.fontFamily.primary};
+        font-size: ${({ theme }: { theme: ITheme }) => theme.fontSize.normal};
+        line-height: ${({ theme }: { theme: ITheme }) => theme.lineHeight.medium};
+        color: ${({ theme }: { theme: ITheme }) => theme.colors.textColor};
+        background-color: ${({ theme }: { theme: ITheme }) => theme.colors.backgroundColor};
         -webkit-text-size-adjust: 100%;
         -webkit-font-kerning: normal;
         font-kerning: normal;
