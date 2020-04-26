@@ -27,7 +27,7 @@ const theme: ITheme = {
     bgColor: '#EDF3F5',
     boxBgColor: '#F9F8F8'
   },
-  spacing: [4, 8, 12, 16, 20, 24, 30, 36, 42],
+  spacing: [4, 8, 12, 16, 20, 24, 30, 42, 60],
   radii: [0, 3, 6, 9, 12, 15],
   shadows: {
     large: `11px 10px 31px -6px rgb(162 162 162 / 0.55)`,
