@@ -61,28 +61,22 @@ export interface ProductProps {
 
 const StyledProduct = styled.div`
   background-color: ${({ theme }: { theme: ITheme }) => theme.colors.boxBgColor};
-  padding: ${({ theme }: { theme: ITheme }) => `${theme.spacing[3]}px`};
+  padding: ${({ theme }: { theme: ITheme }) => `${theme.spacing[5]}px`};
   border-radius: ${({ theme }: { theme: ITheme }) => `${theme.radii[3]}px`};
-  box-shadow: ${({ theme }: { theme: ITheme }) => `${theme.shadows.large}`};
+
+  img {
+    width: 100%;
+    border-radius: ${({ theme }: { theme: ITheme }) => `${theme.radii[3]}px`};
+  }
 `;
 
 const Product = (props: ProductProps) => {
   return (
     <StyledProduct>
+      <picture>
+        <img src="https://i.etsystatic.com/14477901/c/2830/2249/0/568/il/b75e87/2003968158/il_680x540.2003968158_sjy5.jpg" />
+      </picture>
       <h2 className="product__title">{props.product.title}</h2>
-      <p className="product__description">{props.product.description}</p>
-      <div className="product__price-button-container">
-        <div className="product__price">${props.product.price}</div>
-        <button
-          className="snipcart-add-item product__button"
-          data-item-id={props.product.listing_id}
-          data-item-name={props.product.title}
-          data-item-price={props.product.price}
-          data-item-url={props.router.pathname}
-        >
-          Add to cart
-        </button>
-      </div>
     </StyledProduct>
   );
 };

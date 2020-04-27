@@ -24,11 +24,14 @@ const theme: ITheme = {
     primary: '#FDD301',
     secondary: '#FE760A',
     textColor: '#233844',
-    bgColor: '#EDF3F5',
+    bodyBgColor: '#FFFFFF',
     boxBgColor: '#F9F8F8'
   },
-  spacing: [4, 8, 12, 16, 20, 24, 30, 42, 60],
-  radii: [0, 3, 6, 9, 12, 15],
+  spacing: [8, 16, 20, 24, 30, 42, 60, 85, 100],
+  breakpoints: {
+    maxWidth: '1320px'
+  },
+  radii: [0, 10, 15, 20, 25, 30, 40, 50, 99999],
   shadows: {
     large: `11px 10px 31px -6px rgb(162 162 162 / 0.55)`,
     medium: ``,

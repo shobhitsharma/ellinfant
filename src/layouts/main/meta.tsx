@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-const MainHead = ({ title }: { title: string }) => (
+const MetaHead = ({ title }: { title: string }) => (
   <Head>
     <title>{title}</title>
     <meta charSet="utf-8" />
@@ -13,13 +13,7 @@ const MainHead = ({ title }: { title: string }) => (
     <meta property="og:url" content="https://nextshop.now.sh" />
     <meta property="og:image" content="/logo.svg" />
     <meta property="og:description" content="A Next.js Recipe discovery app." />
-
-    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" sizes="180x180" />
-    <link rel="icon" type="image/png" href="favicon/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="favicon/favicon-16x16.png" sizes="16x16" />
-
-    <link rel="manifest" href="/favicon/site.webmanifest" />
   </Head>
 );
 
-export default MainHead;
+export default MetaHead;

@@ -1,11 +1,11 @@
 import { Component, ReactNode } from 'react';
 import { ThemeProvider } from 'styled-components';
 
-import MainHead from './head';
+import MetaHead from './meta';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import { theme, GlobalStyles } from '../../styles';
-import { Main } from './style';
+import { Main, Content } from './style';
 
 export type MainLayoutProps = {
   children: ReactNode;
@@ -21,11 +21,11 @@ class MainLayout extends Component<MainLayoutProps> {
 
     return (
       <ThemeProvider theme={theme}>
-        <MainHead title={metaTitle} />
+        <MetaHead title={metaTitle} />
         <GlobalStyles />
         <Main>
           <Header />
-          {children}
+          <Content>{children}</Content>
           <Footer />
         </Main>
       </ThemeProvider>
