@@ -1,27 +1,23 @@
+import { getListings } from '../data';
+import type { EtsyResponse, EtsyListingImage } from '../data';
+
 import MainLayout from '../layouts/main';
 import Teaser from '../components/Teaser';
 import Products from '../components/Products';
-import type { IProduct } from '../components/Products';
 
-interface IIndexProps {
-  count: number;
-  type: string;
-  results: IProduct[];
+interface IIndexProps extends EtsyResponse {
+  images: { [key: string]: EtsyListingImage[] };
 }
 
 const Index = (props: IIndexProps) => {
   return (
     <MainLayout>
       <Teaser />
-      <Products products={props.results} />
+      <Products products={props.results} images={props.images} />
     </MainLayout>
   );
 };
 
-Index.getInitialProps = async () => {
-  const data = await import('../data/products.json');
-
-  return data;
-};
+Index.getInitialProps = async () => getListings();
 
 export default Index;

@@ -1,10 +1,7 @@
-import { Component, ReactNode } from 'react';
-import { ThemeProvider } from 'styled-components';
-
-import MetaHead from './meta';
+import { Fragment, Component, ReactNode } from 'react';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import { theme, GlobalStyles } from '../../styles';
+import MetaHead from './meta';
 import { Main, Content } from './style';
 
 export type MainLayoutProps = {
@@ -20,15 +17,14 @@ class MainLayout extends Component<MainLayoutProps> {
     const metaTitle = title ? `Ell-infant - ${title}` : DEFAULT_TITLE;
 
     return (
-      <ThemeProvider theme={theme}>
+      <Fragment>
         <MetaHead title={metaTitle} />
-        <GlobalStyles />
         <Main>
           <Header />
           <Content>{children}</Content>
           <Footer />
         </Main>
-      </ThemeProvider>
+      </Fragment>
     );
   }
 }
